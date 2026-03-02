@@ -70,6 +70,7 @@ Segment	Description	Characteristics
 Segment 0	Loyal High-Value Customers	Highest spending, high purchase frequency, strong retention potential
 Segment 1	Price-Sensitive Customers	Lower spending, moderate engagement, respond well to promotions
 Segment 2	Young High-Spending Customers	Younger demographic, trend-driven purchasing, high spending behavior
+
 📈 Key Insights
 
 Premium customers contribute significantly to total revenue
