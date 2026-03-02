@@ -84,15 +84,6 @@ Leverage social media marketing for younger high-spending customers
 
 Optimize seasonal inventory planning
 
-📂 Project Structure
-
-customer-shopping-behaviour-analysis/
-│
-├── analysis.ipynb                 # Jupyter Notebook with analysis & ML workflow
-├── customer_shopping_behavior.csv # Dataset
-├── requirements.txt               # Python dependencies
-└── README.md                      # Project overview
-
 
 📌 Conclusion
 
