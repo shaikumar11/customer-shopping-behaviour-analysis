@@ -2,6 +2,8 @@ Customer Shopping Behaviour Analysis 📊
 
 Advanced Customer Shopping Behaviour Analysis using Python, EDA, and K-Means Clustering to derive actionable business insights and customer segmentation strategies.
 
+
+
 🌟 Project Overview
 
 This project analyzes customer shopping behavior to uncover purchasing patterns, spending trends, and customer segments using data analytics and machine learning techniques.
@@ -16,6 +18,8 @@ Discount and subscription influence
 
 Strategic customer segmentation
 
+
+
 🎯 Business Objectives
 
 Identify high-spending customer segments
@@ -28,6 +32,8 @@ Perform customer segmentation using K-Means clustering
 
 Provide data-driven business recommendations
 
+
+
 🛠 Tools & Technologies
 
 Python
@@ -39,6 +45,8 @@ Pandas & NumPy
 Matplotlib & Seaborn
 
 Scikit-learn
+
+
 
 📊 Exploratory Data Analysis (EDA)
 
@@ -54,6 +62,8 @@ Subscription impact on spending
 
 Discount vs revenue evaluation
 
+
+
 🤖 Customer Segmentation (Machine Learning)
 
 Workflow:
@@ -64,6 +74,8 @@ Determined optimal clusters using Elbow Method
 
 Applied K-Means Clustering for segmentation
 
+
+
 📈 Key Insights
 
 Premium customers contribute significantly to total revenue
@@ -73,6 +85,7 @@ Subscription members show higher average spending
 Discounts positively influence purchase amounts
 
 Seasonal patterns impact customer behavior
+
 
 🚀 Business Recommendations
 
