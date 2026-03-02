@@ -64,13 +64,6 @@ Determined optimal clusters using Elbow Method
 
 Applied K-Means Clustering for segmentation
 
-Identified Customer Segments:
-
-Segment	Description	Characteristics
-Segment 0	Loyal High-Value Customers	Highest spending, high purchase frequency, strong retention potential
-Segment 1	Price-Sensitive Customers	Lower spending, moderate engagement, respond well to promotions
-Segment 2	Young High-Spending Customers	Younger demographic, trend-driven purchasing, high spending behavior
-
 📈 Key Insights
 
 Premium customers contribute significantly to total revenue
@@ -92,12 +85,15 @@ Leverage social media marketing for younger high-spending customers
 Optimize seasonal inventory planning
 
 📂 Project Structure
+
 customer-shopping-behaviour-analysis/
 │
 ├── analysis.ipynb                 # Jupyter Notebook with analysis & ML workflow
 ├── customer_shopping_behavior.csv # Dataset
 ├── requirements.txt               # Python dependencies
 └── README.md                      # Project overview
+
+
 📌 Conclusion
 
 This project demonstrates a practical data analytics workflow, including:
