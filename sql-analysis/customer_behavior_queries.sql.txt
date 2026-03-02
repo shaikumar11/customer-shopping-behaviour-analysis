@@ -1,41 +1,79 @@
-/* CUSTOMER SHOPPING BEHAVIOR ANALYSIS */
+-- 1. View all data
+SELECT * 
+FROM customer_shopping_behavior;
 
-/* 1️⃣ Total Sales */
-SELECT SUM(`Purchase Amount (USD)`) AS Total_Sales
-FROM customer_data;
+------------------------------------------------------------
 
-/* 2️⃣ Total Customers */
-SELECT COUNT(DISTINCT Customer ID) AS Total_Customers
-FROM customer_data;
+-- 2. Total Revenue
+SELECT SUM("Purchase Amount (USD)") AS Total_Revenue
+FROM customer_shopping_behavior;
 
-/* 3️⃣ Average Purchase */
-SELECT AVG(`Purchase Amount (USD)`) AS Average_Purchase
-FROM customer_data;
+------------------------------------------------------------
 
-/* 4️⃣ Sales by Category */
-SELECT Category,
-       SUM(`Purchase Amount (USD)`) AS Total_Sales
-FROM customer_data
-GROUP BY Category
-ORDER BY Total_Sales DESC;
-
-/* 5️⃣ Sales by Gender */
-SELECT Gender,
-       SUM(`Purchase Amount (USD)`) AS Total_Sales
-FROM customer_data
+-- 3. Average Purchase Amount by Gender
+SELECT Gender, 
+       AVG("Purchase Amount (USD)") AS Avg_Purchase
+FROM customer_shopping_behavior
 GROUP BY Gender;
 
-/* 6️⃣ Sales by Season */
-SELECT Season,
-       SUM(`Purchase Amount (USD)`) AS Total_Sales
-FROM customer_data
-GROUP BY Season
-ORDER BY Total_Sales DESC;
+------------------------------------------------------------
 
-/* 7️⃣ Top 5 Customers */
-SELECT `Customer ID`,
-       SUM(`Purchase Amount (USD)`) AS Total_Spent
-FROM customer_data
-GROUP BY `Customer ID`
+-- 4. Total Revenue by Category
+SELECT Category, 
+       SUM("Purchase Amount (USD)") AS Category_Revenue
+FROM customer_shopping_behavior
+GROUP BY Category
+ORDER BY Category_Revenue DESC;
+
+------------------------------------------------------------
+
+-- 5. Top 5 Customers by Spending
+SELECT "Customer ID",
+       SUM("Purchase Amount (USD)") AS Total_Spent
+FROM customer_shopping_behavior
+GROUP BY "Customer ID"
 ORDER BY Total_Spent DESC
 LIMIT 5;
+
+------------------------------------------------------------
+
+-- 6. Most Popular Payment Method
+SELECT "Payment Method",
+       COUNT(*) AS Usage_Count
+FROM customer_shopping_behavior
+GROUP BY "Payment Method"
+ORDER BY Usage_Count DESC;
+
+------------------------------------------------------------
+
+-- 7. Average Rating by Category
+SELECT Category,
+       AVG("Review Rating") AS Avg_Rating
+FROM customer_shopping_behavior
+GROUP BY Category
+ORDER BY Avg_Rating DESC;
+
+------------------------------------------------------------
+
+-- 8. Revenue by Season
+SELECT Season,
+       SUM("Purchase Amount (USD)") AS Seasonal_Revenue
+FROM customer_shopping_behavior
+GROUP BY Season
+ORDER BY Seasonal_Revenue DESC;
+
+------------------------------------------------------------
+
+-- 9. Customers with More Than 30 Previous Purchases
+SELECT "Customer ID",
+       "Previous Purchases"
+FROM customer_shopping_behavior
+WHERE "Previous Purchases" > 30;
+
+------------------------------------------------------------
+
+-- 10. Subscription vs Non-Subscription Revenue
+SELECT "Subscription Status",
+       SUM("Purchase Amount (USD)") AS Revenue
+FROM customer_shopping_behavior
+GROUP BY "Subscription Status";
