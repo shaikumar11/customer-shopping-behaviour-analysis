@@ -1,0 +1,41 @@
+/* CUSTOMER SHOPPING BEHAVIOR ANALYSIS */
+
+/* 1️⃣ Total Sales */
+SELECT SUM(`Purchase Amount (USD)`) AS Total_Sales
+FROM customer_data;
+
+/* 2️⃣ Total Customers */
+SELECT COUNT(DISTINCT Customer ID) AS Total_Customers
+FROM customer_data;
+
+/* 3️⃣ Average Purchase */
+SELECT AVG(`Purchase Amount (USD)`) AS Average_Purchase
+FROM customer_data;
+
+/* 4️⃣ Sales by Category */
+SELECT Category,
+       SUM(`Purchase Amount (USD)`) AS Total_Sales
+FROM customer_data
+GROUP BY Category
+ORDER BY Total_Sales DESC;
+
+/* 5️⃣ Sales by Gender */
+SELECT Gender,
+       SUM(`Purchase Amount (USD)`) AS Total_Sales
+FROM customer_data
+GROUP BY Gender;
+
+/* 6️⃣ Sales by Season */
+SELECT Season,
+       SUM(`Purchase Amount (USD)`) AS Total_Sales
+FROM customer_data
+GROUP BY Season
+ORDER BY Total_Sales DESC;
+
+/* 7️⃣ Top 5 Customers */
+SELECT `Customer ID`,
+       SUM(`Purchase Amount (USD)`) AS Total_Spent
+FROM customer_data
+GROUP BY `Customer ID`
+ORDER BY Total_Spent DESC
+LIMIT 5;
